@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Leaderboard
+{% endblock %}
+
+{% block main %}
+<h1>Top scores</h1>
+  
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Correct</th>
+    <th>Wrong</th>
+    <th>Percentage</th>
+  </tr>
+  {% for score in scores%}
+  <tr>
+    <td>{{score.username}}</td>
+    <td>{{score.date}}</td>
+    <td>{{score.correct}}</td>
+    <td>{{score.wrong}}</td>
+    <td>{{score.percentage}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

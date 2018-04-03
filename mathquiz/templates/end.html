@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    End
+{% endblock %}
+
+{% block main %}
+    
+    
+    <form action="{{ url_for('end') }}" method="post">
+        <div id="score">
+            <p>Well done. In one minute you scored {{correct}} correct with {{wrong}} wrong</p>
+        </div>
+        <fieldset>
+                
+            <div class="form-group">
+                <button class="btn btn-default" name="submit" id = "finish" value="finish" type="submit">Return to home page</button>
+            </div>
+        </fieldset>
+        
+    </form>
+    
+{% endblock %}

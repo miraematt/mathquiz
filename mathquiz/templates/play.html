@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Play
+{% endblock %}
+
+{% block main %}
+    
+    
+    <form action="{{ url_for('play') }}" method="post">
+        <fieldset>
+            <h1>Instructions</h1>
+            <p>Press the play button and answer as many questions as you can in one minute.</p>
+            <div class="form-group" >
+                <button class="btn btn-default" type="submit" name="submit" id = "play" value="play">Play</button>
+            </div>
+            
+        </fieldset>
+       
+    </form>
+    
+{% endblock %}
